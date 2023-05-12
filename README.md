@@ -11,8 +11,8 @@ The spreadsheet follows a data model which is partially based on the [Alignment 
 The mappings defined:
  * are 1:1 with the closest classes and properties with other specification
  * have direction from SEMIC data specifications to other specifications
- * make uses of RDFS (subClassOf/subPropertyOf) and OWL (equivalentClass/equivalentProperty) axioms
+ * make uses of RDFS (subClassOf/subPropertyOf) and OWL (equivalentClass/equivalentProperty) relations
  
-In this way direct mapping relations could be extracted and used to perform automatic convertions (e.g. via SPARQL queries) from SEMIC data specification to other specifications.
+In this way direct mapping relations could be extracted and used to perform automatic convertions (e.g. via SPARQL queries) from SEMIC data specification to other specifications. In addition, RDFS and OWL relations could be used by graph databases/reasoners to generate new inferred triples.
 
 
