@@ -10,9 +10,19 @@ The spreadsheet follows a data model which is partially based on the [Alignment 
 
 The mappings defined:
  * are 1:1 with the closest classes and properties with other specification
- * have direction from SEMIC data specifications to other specifications
+ * have direction from SEMIC data specifications (source) to other specifications (target)
  * make uses of RDFS (subClassOf/subPropertyOf) and OWL (equivalentClass/equivalentProperty) relations
- 
-In this way direct mapping relations could be extracted and used to perform automatic convertions (e.g. via SPARQL queries) from SEMIC data specification to other specifications. In addition, RDFS and OWL relations could be used by graph databases/reasoners to generate new inferred triples.
 
+In this way direct mapping relations could be extracted and used to perform automatic convertions (e.g. via SPARQL queries) from SEMIC data specification to other specifications. In addition, RDFS and OWL relations could be used by graph databases (such as [Virtuoso](https://docs.openlinksw.com/virtuoso/rdfsparqlruleintro/] or [GraphDB](https://graphdb.ontotext.com/documentation/10.0/reasoning.html#predefined-rulesets)  reasoners to generate new inferred triples.
 
+# Process
+
+The overall process is semi-automatic and it depends on 3 types of mappings: direct, indirect and mappings coming out of the matching process:
+
+ * existing and old direct mappings have been evaluated and updated
+ * indirect mappings are automatic extracted from Wikidata and DBpedia and evaluated
+ * The matching process consisted of using Silk Framework which compares:
+   * labels of the concepts of source and target ontologies
+   * synonyms of Core Vocabularies concepts with the labels of the concepts oftarget ontology; synonyms have been automatically extrated from different services (API such as [Datamuse](https://www.datamuse.com/api/] and [Altervista](https://thesaurus.altervista.org/) and RDF files ([Wordnet](https://wordnet-rdf.princeton.edu/license), [Wiktionary](http://kaiko.getalp.org/about-dbnary/download/), [Unesco](https://vocabularies.unesco.org/browser/thesaurus/en/), [LCSH](https://id.loc.gov/download/), [STW](https://zbw.eu/stw/version/latest/download/about.en.html), [Eurovoc](https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc), [FIBO](https://github.com/edmcouncil/fibo), [LOV](https://lov.linkeddata.es/dataset/lov/sparql))
+
+The mappings of the matching process are then imported into the spreadsheet, where manual refinement is performed considering the analysis done on direct and indirect mapping.
