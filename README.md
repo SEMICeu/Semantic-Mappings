@@ -13,7 +13,7 @@ The mappings defined:
  * have direction from SEMIC data specifications (source) to other specifications (target)
  * make uses of RDFS (subClassOf/subPropertyOf) and OWL (equivalentClass/equivalentProperty) relations
 
-In this way direct mapping relations could be extracted and used to perform automatic convertions (e.g. via SPARQL queries) from SEMIC data specification to other specifications. In addition, RDFS and OWL relations could be used by graph databases (such as [Virtuoso](https://docs.openlinksw.com/virtuoso/rdfsparqlruleintro/] or [GraphDB](https://graphdb.ontotext.com/documentation/10.0/reasoning.html#predefined-rulesets)  reasoners to generate new inferred triples.
+In this way direct mapping relations could be extracted and used to perform automatic convertions (e.g. via SPARQL queries) from SEMIC data specification to other specifications. In addition, RDFS and OWL relations could be used by graph databases (such as [Virtuoso](https://docs.openlinksw.com/virtuoso/rdfsparqlruleintro/], [Jena](https://jena.apache.org/documentation/inference/) or [GraphDB](https://graphdb.ontotext.com/documentation/10.0/reasoning.html#predefined-rulesets)  reasoners to generate new inferred triples.
 
 # Process
 
