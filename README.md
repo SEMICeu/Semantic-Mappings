@@ -1,4 +1,4 @@
-# Semantic-Mappings
+# Semantic Mappings
 
 This repository contains all the mappings created as outcome of the alignment process of the SEMIC data specifications with other specifications such as Schema.org.
 
