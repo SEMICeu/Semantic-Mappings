@@ -27,4 +27,4 @@ The overall process is semi-automatic and it depends on 3 types of mappings: dir
 
 The mappings of the matching process are then imported into the spreadsheet, where manual refinement is performed considering the analysis done on direct and indirect mapping.
 
-More information on the process can be found on the [Alignment document](Methodology/Alignment_with_Schema.org_v2.1.pdf)
+More information on the process can be found on the [Alignment document](Methodology/Alignment_with_Schema.org_v2.1.pdf).
