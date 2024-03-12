@@ -24,7 +24,7 @@
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 
 <http://mapping.semic.eu/cper/sdo> a align:Alignment;
-  dct:created "2023-03-06"^^xsd:date;
+  dct:created "2024-03-12"^^xsd:date;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
   dct:license <https://creativecommons.org/licenses/by/4.0/>;
   dct:title "Alignment of Core Person with Schema.org";
@@ -49,8 +49,8 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
     <http://mapping.semic.eu/cper/sdo/cell/41>, <http://mapping.semic.eu/cper/sdo/cell/42>,
     <http://mapping.semic.eu/cper/sdo/cell/43>, <http://mapping.semic.eu/cper/sdo/cell/45>,
     <http://mapping.semic.eu/cper/sdo/cell/46>;
-  sssom:subject_source_version "2.0.0";
-  sssom:object_source_version "15" .
+  sssom:subject_source_version "2.1.1";
+  sssom:object_source_version "26.0" .
 
 <http://mapping.semic.eu/cper/sdo/cell/1> a align:Cell;
   align:entity1 <http://www.w3.org/ns/locn#Address>;
