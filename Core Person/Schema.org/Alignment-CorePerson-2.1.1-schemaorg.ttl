@@ -1,0 +1,365 @@
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix cpersdo: <http://mapping.semic.eu/cper/sdo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://mapping.semic.eu/cper/sdo> a align:Alignment;
+  dct:created "2023-03-06"^^xsd:date;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
+  dct:license <https://creativecommons.org/licenses/by/4.0/>;
+  dct:title "Alignment of Core Person with Schema.org";
+  dct:description """It describes an alignment between Core Person and Schema.org.
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
+  align:onto1 <http://data.europa.eu/m8g/>;
+  align:onto2 <https://schema.org/>;
+  align:map <http://mapping.semic.eu/cper/sdo/cell/1>, <http://mapping.semic.eu/cper/sdo/cell/2>,
+    <http://mapping.semic.eu/cper/sdo/cell/3>, <http://mapping.semic.eu/cper/sdo/cell/4>,
+    <http://mapping.semic.eu/cper/sdo/cell/5>, <http://mapping.semic.eu/cper/sdo/cell/7>,
+    <http://mapping.semic.eu/cper/sdo/cell/8>, <http://mapping.semic.eu/cper/sdo/cell/9>,
+    <http://mapping.semic.eu/cper/sdo/cell/10>, <http://mapping.semic.eu/cper/sdo/cell/11>,
+    <http://mapping.semic.eu/cper/sdo/cell/12>, <http://mapping.semic.eu/cper/sdo/cell/13>,
+    <http://mapping.semic.eu/cper/sdo/cell/15>, <http://mapping.semic.eu/cper/sdo/cell/25>,
+    <http://mapping.semic.eu/cper/sdo/cell/26>, <http://mapping.semic.eu/cper/sdo/cell/27>,
+    <http://mapping.semic.eu/cper/sdo/cell/28>, <http://mapping.semic.eu/cper/sdo/cell/29>,
+    <http://mapping.semic.eu/cper/sdo/cell/30>, <http://mapping.semic.eu/cper/sdo/cell/32>,
+    <http://mapping.semic.eu/cper/sdo/cell/33>, <http://mapping.semic.eu/cper/sdo/cell/34>,
+    <http://mapping.semic.eu/cper/sdo/cell/35>, <http://mapping.semic.eu/cper/sdo/cell/36>,
+    <http://mapping.semic.eu/cper/sdo/cell/37>, <http://mapping.semic.eu/cper/sdo/cell/38>,
+    <http://mapping.semic.eu/cper/sdo/cell/39>, <http://mapping.semic.eu/cper/sdo/cell/40>,
+    <http://mapping.semic.eu/cper/sdo/cell/41>, <http://mapping.semic.eu/cper/sdo/cell/42>,
+    <http://mapping.semic.eu/cper/sdo/cell/43>, <http://mapping.semic.eu/cper/sdo/cell/45>,
+    <http://mapping.semic.eu/cper/sdo/cell/46>;
+  sssom:subject_source_version "2.0.0";
+  sssom:object_source_version "15" .
+
+<http://mapping.semic.eu/cper/sdo/cell/1> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#Address>;
+  align:entity2 <https://schema.org/PostalAddress>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/2> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#addressArea>;
+  align:entity2 <https://schema.org/addressLocality>;
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In Core Location addressArea is for a part of city while schema:addressLocality could indicate a city." .
+
+<http://mapping.semic.eu/cper/sdo/cell/3> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#addressId>;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values" .
+
+<http://mapping.semic.eu/cper/sdo/cell/4> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#adminUnitL1>;
+  align:entity2 <https://schema.org/addressCountry>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values" .
+
+<http://mapping.semic.eu/cper/sdo/cell/5> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#adminUnitL2>;
+  align:entity2 <https://schema.org/addressRegion>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/7> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#locatorDesignator>;
+  align:entity2 <https://schema.org/streetAddress>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/8> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#locatorName>;
+  align:entity2 <https://schema.org/location>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "If schema:location is expressed as Text, locatorName could be equivalent.";
+  rdfs:comment "The target entity can have multiple values" .
+
+<http://mapping.semic.eu/cper/sdo/cell/9> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#poBox>;
+  align:entity2 <https://schema.org/postOfficeBoxNumber>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/10> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#postCode>;
+  align:entity2 <https://schema.org/postalCode>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/11> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#postName>;
+  align:entity2 <https://schema.org/addressLocality>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/12> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#thoroughfare>;
+  align:entity2 <https://schema.org/streetAddress>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/13> a align:Cell;
+  align:entity1 dct:Location;
+  align:entity2 <https://schema.org/Place>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/15> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#geographicName>;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/25> a align:Cell;
+  align:entity1 dct:Jurisdiction;
+  align:entity2 <https://schema.org/AdministrativeArea>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/26> a align:Cell;
+  align:entity1 dct:identifier;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In Core Person it denotes the identifier of a Jurisdiction" .
+
+<http://mapping.semic.eu/cper/sdo/cell/27> a align:Cell;
+  align:entity1 rdfs:label;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/28> a align:Cell;
+  align:entity1 foaf:Person;
+  align:entity2 <https://schema.org/Person>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/29> a align:Cell;
+  align:entity1 dct:alternative;
+  align:entity2 <https://schema.org/alternateName>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In Core Person it denotes the alternative name of a Person" .
+
+<http://mapping.semic.eu/cper/sdo/cell/30> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/person#birthName>;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/32> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/person#countryOfBirth>;
+  align:entity2 <https://schema.org/birthPlace>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/33> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/person#countryOfDeath>;
+  align:entity2 <https://schema.org/deathPlace>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/34> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/birthDate>;
+  align:entity2 <https://schema.org/birthDate>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/35> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/deathDate>;
+  align:entity2 <https://schema.org/deathDate>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/36> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/domicile>;
+  align:entity2 <https://schema.org/address>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/37> a align:Cell;
+  align:entity1 foaf:familyName;
+  align:entity2 <https://schema.org/familyName>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/38> a align:Cell;
+  align:entity1 foaf:name;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In Core Person it denotes the full name of a Person" .
+
+<http://mapping.semic.eu/cper/sdo/cell/39> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/gender>;
+  align:entity2 <https://schema.org/gender>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/40> a align:Cell;
+  align:entity1 foaf:givenName;
+  align:entity2 <https://schema.org/givenName>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/41> a align:Cell;
+  align:entity1 dct:identifier;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In Core Person it denotes the identifier of a Person" .
+
+<http://mapping.semic.eu/cper/sdo/cell/42> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/matronymicName>;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/43> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/person#patronymicName>;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/45> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/person#placeOfBirth>;
+  align:entity2 <https://schema.org/birthPlace>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/46> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/person#placeOfDeath>;
+  align:entity2 <https://schema.org/deathPlace>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/48> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/contactPoint>;
+  align:entity2 <https://schema.org/contactPoint>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/49> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/ContactPoint>;
+  align:entity2 <https://schema.org/ContactPoint>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/50> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/contactPage>;
+  align:entity2 <https://schema.org/mainEntityOfPage>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/51> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/email>;
+  align:entity2 <https://schema.org/email>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cper/sdo/cell/52> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/telephone>;
+  align:entity2 <https://schema.org/telephone>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
