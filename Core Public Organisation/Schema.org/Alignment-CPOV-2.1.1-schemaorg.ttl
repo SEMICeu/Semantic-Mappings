@@ -1,0 +1,477 @@
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix cpovsdo: <http://mapping.semic.eu/cpov/sdo/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://mapping.semic.eu/cpov/sdo> a align:Alignment;
+  dct:created "2024-03-12"^^xsd:date;
+  dct:modified "2024-03-12"^^xsd:date;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
+  dct:license <https://creativecommons.org/licenses/by/4.0/>;
+  dct:title "Alignment of Core Public Organisation with Schema.org"@en;
+  dct:description """It describes an alignment between Core Public Organisation and Schema.org.
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format is based on the Aligment Format and on SSSOM."""@en;
+  align:onto1 <http://data.europa.eu/m8g/>;
+  align:onto2 <https://schema.org/>;
+  align:map <http://mapping.semic.eu/cpov/sdo/cell/1>, <http://mapping.semic.eu/cpov/sdo/cell/2>,
+    <http://mapping.semic.eu/cpov/sdo/cell/3>, <http://mapping.semic.eu/cpov/sdo/cell/4>,
+    <http://mapping.semic.eu/cpov/sdo/cell/5>, <http://mapping.semic.eu/cpov/sdo/cell/7>,
+    <http://mapping.semic.eu/cpov/sdo/cell/8>, <http://mapping.semic.eu/cpov/sdo/cell/9>,
+    <http://mapping.semic.eu/cpov/sdo/cell/10>, <http://mapping.semic.eu/cpov/sdo/cell/11>,
+    <http://mapping.semic.eu/cpov/sdo/cell/12>, <http://mapping.semic.eu/cpov/sdo/cell/13>,
+    <http://mapping.semic.eu/cpov/sdo/cell/14>, <http://mapping.semic.eu/cpov/sdo/cell/15>,
+    <http://mapping.semic.eu/cpov/sdo/cell/16>, <http://mapping.semic.eu/cpov/sdo/cell/18>,
+    <http://mapping.semic.eu/cpov/sdo/cell/21>, <http://mapping.semic.eu/cpov/sdo/cell/22>,
+    <http://mapping.semic.eu/cpov/sdo/cell/23>, <http://mapping.semic.eu/cpov/sdo/cell/24>,
+    <http://mapping.semic.eu/cpov/sdo/cell/25>, <http://mapping.semic.eu/cpov/sdo/cell/26>,
+    <http://mapping.semic.eu/cpov/sdo/cell/27>, <http://mapping.semic.eu/cpov/sdo/cell/30>,
+    <http://mapping.semic.eu/cpov/sdo/cell/31>, <http://mapping.semic.eu/cpov/sdo/cell/33>,
+    <http://mapping.semic.eu/cpov/sdo/cell/35>, <http://mapping.semic.eu/cpov/sdo/cell/36>,
+    <http://mapping.semic.eu/cpov/sdo/cell/37>, <http://mapping.semic.eu/cpov/sdo/cell/38>,
+    <http://mapping.semic.eu/cpov/sdo/cell/39>, <http://mapping.semic.eu/cpov/sdo/cell/40>,
+    <http://mapping.semic.eu/cpov/sdo/cell/41>, <http://mapping.semic.eu/cpov/sdo/cell/42>,
+    <http://mapping.semic.eu/cpov/sdo/cell/43>, <http://mapping.semic.eu/cpov/sdo/cell/44>,
+    <http://mapping.semic.eu/cpov/sdo/cell/45>, <http://mapping.semic.eu/cpov/sdo/cell/46>,
+    <http://mapping.semic.eu/cpov/sdo/cell/47>, <http://mapping.semic.eu/cpov/sdo/cell/48>,
+    <http://mapping.semic.eu/cpov/sdo/cell/49>, <http://mapping.semic.eu/cpov/sdo/cell/50>,
+    <http://mapping.semic.eu/cpov/sdo/cell/51>, <http://mapping.semic.eu/cpov/sdo/cell/52>,
+    <http://mapping.semic.eu/cpov/sdo/cell/54>, <http://mapping.semic.eu/cpov/sdo/cell/58>,
+    <http://mapping.semic.eu/cpov/sdo/cell/59>;
+  sssom:subject_source_version "2.1.1";
+  sssom:object_source_version "26.0" .
+
+<http://mapping.semic.eu/cpov/sdo/cell/1> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#Address>;
+  align:entity2 <https://schema.org/PostalAddress>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/2> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#addressArea>;
+  align:entity2 <https://schema.org/addressLocality>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In Core Location addressArea is for a part of city while schema:addressLocality could indicate a city."@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/3> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#addressId>;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/4> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#adminUnitL1>;
+  align:entity2 <https://schema.org/addressCountry>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/5> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#adminUnitL2>;
+  align:entity2 <https://schema.org/addressRegion>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/7> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#locatorDesignator>;
+  align:entity2 <https://schema.org/streetAddress>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/8> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#locatorName>;
+  align:entity2 <https://schema.org/location>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "If schema:location is expressed as Text, locatorName could be equivalent."@en;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/9> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#poBox>;
+  align:entity2 <https://schema.org/postOfficeBoxNumber>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/10> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#postCode>;
+  align:entity2 <https://schema.org/postalCode>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/11> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#postName>;
+  align:entity2 <https://schema.org/addressLocality>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/12> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#thoroughfare>;
+  align:entity2 <https://schema.org/streetAddress>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/13> a align:Cell;
+  align:entity1 <http://data.europa.eu/88u/dataset/atu-type>;
+  align:entity2 <https://schema.org/AdministrativeArea>;
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/14> a align:Cell;
+  align:entity1 org:ChangeEvent;
+  align:entity2 <https://schema.org/Event>;
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/15> a align:Cell;
+  align:entity1 dct:description;
+  align:entity2 <https://schema.org/description>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a description of a Change Event."@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/16> a align:Cell;
+  align:entity1 prov:endedAtTime;
+  align:entity2 <https://schema.org/endDate>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/18> a align:Cell;
+  align:entity1 dct:identifier;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes the identifier of a ReferenceFramework"@en;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/21> a align:Cell;
+  align:entity1 prov:startedAtTime;
+  align:entity2 <https://schema.org/startDate>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/22> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/ContactPoint>;
+  align:entity2 <https://schema.org/ContactPoint>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/23> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/specialOpeningHoursSpecification>;
+  align:entity2 <https://schema.org/specialOpeningHoursSpecification>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/24> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/contactPage>;
+  align:entity2 <https://schema.org/mainEntityOfPage>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/25> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/email>;
+  align:entity2 <https://schema.org/email>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/26> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/telephone>;
+  align:entity2 <https://schema.org/telephone>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/27> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/openingHours>;
+  align:entity2 <https://schema.org/openingHours>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/30> a align:Cell;
+  align:entity1 dct:issued;
+  align:entity2 <https://schema.org/datePublished>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes the date in which an Identifier is issued"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/31> a align:Cell;
+  align:entity1 adms:schemeAgency;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/33> a align:Cell;
+  align:entity1 rdfs:label;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/35> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/ImageObject>;
+  align:entity2 <https://schema.org/ImageObject>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/36> a align:Cell;
+  align:entity1 org:Organization;
+  align:entity2 <https://schema.org/Organization>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/37> a align:Cell;
+  align:entity1 org:OrganizationalUnit;
+  align:entity2 <https://schema.org/Organization>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/38> a align:Cell;
+  align:entity1 org:unitOf;
+  align:entity2 <https://schema.org/memberOf>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/39> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/PublicOrganisation>;
+  align:entity2 <https://schema.org/Organization>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/40> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#address>;
+  align:entity2 <https://schema.org/address>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes an address of a Public Organisation."@en;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/41> a align:Cell;
+  align:entity1 skos:altLabel;
+  align:entity2 <https://schema.org/alternateName>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes an alternative name of a Public Organisation."@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/42> a align:Cell;
+  align:entity1 org:changedBy;
+  align:entity2 <https://schema.org/event>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/43> a align:Cell;
+  align:entity1 org:classification;
+  align:entity2 <https://schema.org/category>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "schema:isicV4 is considered a narrower concept as it is a particular code list values, thus not mapped."@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/44> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/contactPoint>;
+  align:entity2 <https://schema.org/contactPoint>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/45> a align:Cell;
+  align:entity1 dct:description;
+  align:entity2 <https://schema.org/description>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a description of a Public Organisation."@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/46> a align:Cell;
+  align:entity1 org:hasMember;
+  align:entity2 <https://schema.org/member>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a relation with a Public Organisation"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/47> a align:Cell;
+  align:entity1 org:hasSubOrganization;
+  align:entity2 <https://schema.org/subOrganization>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/48> a align:Cell;
+  align:entity1 org:hasUnit;
+  align:entity2 <https://schema.org/department>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a relation with a Public Organisation"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/49> a align:Cell;
+  align:entity1 foaf:homepage;
+  align:entity2 <https://schema.org/mainEntityOfPage>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a relation with a Public Organisation"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/50> a align:Cell;
+  align:entity1 adms:identifier;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/51> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/logo>;
+  align:entity2 <https://schema.org/logo>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a logo of a Public Organisation"@en;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/52> a align:Cell;
+  align:entity1 org:memberOf;
+  align:entity2 <https://schema.org/memberOf>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a relation with a Public Organisation"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/54> a align:Cell;
+  align:entity1 skos:prefLabel;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/58> a align:Cell;
+  align:entity1 dct:spatial;
+  align:entity2 <https://schema.org/areaServed>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/59> a align:Cell;
+  align:entity1 org:subOrganizationOf;
+  align:entity2 <https://schema.org/parentOrganization>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/cpov/sdo/cell/60> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/frequency>;
+  align:entity2 <https://schema.org/repeatFrequency>;
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "The target entity can have multiple values"@en .
+
+<http://mapping.semic.eu/cpov/sdo/cell/62> a align:Cell;
+  align:entity1 dct:description;
+  align:entity2 <https://schema.org/description>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  dct:description "In CPOV it denotes a description of a Temporal Entity"@en .
