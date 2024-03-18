@@ -1,0 +1,213 @@
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix locsdo: <http://mapping.semic.eu/location/sdo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://mapping.semic.eu/location/sdo> a align:Alignment;
+  dct:created "2024-03-12"^^xsd:date;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
+  dct:license <https://creativecommons.org/licenses/by/4.0/>;
+  dct:title "Alignment of Core Location with Schema.org";
+  dct:description """It describes an alignment between Core Location and Schema.org. The mapping is based on the previous work at: https://semiceu.github.io/locn-mapping/.
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
+  align:onto1 <http://data.europa.eu/m8g/>;
+  align:onto2 <https://schema.org/>;
+  align:map <http://mapping.semic.eu/location/sdo/cell/1>, <http://mapping.semic.eu/location/sdo/cell/2>,
+    <http://mapping.semic.eu/location/sdo/cell/3>, <http://mapping.semic.eu/location/sdo/cell/4>,
+    <http://mapping.semic.eu/location/sdo/cell/5>, <http://mapping.semic.eu/location/sdo/cell/6>,
+    <http://mapping.semic.eu/location/sdo/cell/7>, <http://mapping.semic.eu/location/sdo/cell/8>,
+    <http://mapping.semic.eu/location/sdo/cell/9>, <http://mapping.semic.eu/location/sdo/cell/10>,
+    <http://mapping.semic.eu/location/sdo/cell/11>, <http://mapping.semic.eu/location/sdo/cell/12>,
+    <http://mapping.semic.eu/location/sdo/cell/23>, <http://mapping.semic.eu/location/sdo/cell/24>,
+    <http://mapping.semic.eu/location/sdo/cell/26>, <http://mapping.semic.eu/location/sdo/cell/28>,
+    <http://mapping.semic.eu/location/sdo/cell/30>, <http://mapping.semic.eu/location/sdo/cell/31>,
+    <http://mapping.semic.eu/location/sdo/cell/32>, <http://mapping.semic.eu/location/sdo/cell/33>;
+  sssom:subject_source_version "2.1.0";
+  sssom:object_source_version "26.0" .
+
+<http://mapping.semic.eu/location/sdo/cell/1> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#Address>;
+  align:entity2 <https://schema.org/PostalAddress>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/2> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#addressArea>;
+  align:entity2 <https://schema.org/addressLocality>;
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "addressArea is for a part of city while addressLocality could indicate a city" .
+
+<http://mapping.semic.eu/location/sdo/cell/3> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#addressId>;
+  align:entity2 <https://schema.org/identifier>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/4> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#adminUnitL1>;
+  align:entity2 <https://schema.org/addressCountry>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/5> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#adminUnitL2>;
+  align:entity2 <https://schema.org/addressRegion>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/6> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#fullAddress>;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "0.5"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "It could be a subPropertyOf sdo:address property when expressed as Text" .
+
+<http://mapping.semic.eu/location/sdo/cell/7> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#locatorDesignator>;
+  align:entity2 <https://schema.org/streetAddress>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/8> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#locatorName>;
+  align:entity2 <https://schema.org/location>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "As location might be expressed as Text, in this case locatorName might map to location" .
+
+<http://mapping.semic.eu/location/sdo/cell/9> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#poBox>;
+  align:entity2 <https://schema.org/postOfficeBoxNumber>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/10> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#postCode>;
+  align:entity2 <https://schema.org/postalCode>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/11> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#postName>;
+  align:entity2 <https://schema.org/addressLocality>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/12> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#thoroughfare>;
+  align:entity2 <https://schema.org/streetAddress>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/23> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/latitude>;
+  align:entity2 <https://schema.org/latitude>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "Added" .
+
+<http://mapping.semic.eu/location/sdo/cell/24> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/longitude>;
+  align:entity2 <https://schema.org/longitude>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "Added" .
+
+<http://mapping.semic.eu/location/sdo/cell/26> a align:Cell;
+  align:entity1 dct:Location;
+  align:entity2 <https://schema.org/Place>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/28> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#geographicName>;
+  align:entity2 <https://schema.org/name>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/30> a align:Cell;
+  align:entity1 <http://w3.org/ns/locn#address>;
+  align:entity2 <https://schema.org/address>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "changed from closeMatch: sdo:address can take PostalAddress but also a Text as values." .
+
+<http://mapping.semic.eu/location/sdo/cell/31> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#geometry>;
+  align:entity2 <https://schema.org/geo>;
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  sssom:mapping_justification semapv:MappingReview .
+
+<http://mapping.semic.eu/location/sdo/cell/32> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/locn#location>;
+  align:entity2 <https://schema.org/location>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "Added: sdo:location can have different values including Place (which is mapped to Location)" .
+
+<http://mapping.semic.eu/location/sdo/cell/33> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/registeredAddress>;
+  align:entity2 <https://schema.org/address>;
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification semapv:MappingReview;
+  rdfs:comment "Added" .

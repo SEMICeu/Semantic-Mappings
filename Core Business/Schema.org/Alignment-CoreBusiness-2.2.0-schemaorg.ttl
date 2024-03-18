@@ -24,7 +24,7 @@
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 
 <http://mapping.semic.eu/business/sdo> a align:Alignment;
-  dct:created "2023-01-25"^^xsd:date;
+  dct:created "2024-03-12"^^xsd:date;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
   dct:license <https://creativecommons.org/licenses/by/4.0/>;
   dct:title "Alignment of Core Business with Schema.org";
@@ -42,8 +42,8 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
     <http://mapping.semic.eu/business/sdo/cell/22>, <http://mapping.semic.eu/business/sdo/cell/23>,
     <http://mapping.semic.eu/business/sdo/cell/27>, <http://mapping.semic.eu/business/sdo/cell/28>,
     <http://mapping.semic.eu/business/sdo/cell/29>;
-  sssom:subject_source_version "2.0.0";
-  sssom:object_source_version "15" .
+  sssom:subject_source_version "2.2.0";
+  sssom:object_source_version "26.0" .
 
 <http://mapping.semic.eu/business/sdo/cell/1> a align:Cell;
   align:entity1 <http://www.w3.org/ns/locn#Address>;
