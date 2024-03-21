@@ -89,7 +89,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:entity1 <http://www.w3.org/ns/locn#fullAddress>;
   align:entity2 <https://schema.org/name>;
   align:relation "<";
-  align:measure "0.5"^^xsd:float;
+  align:measure "1"^^xsd:float;
   owl:annotatedProperty rdfs:subPropertyOf;
   sssom:mapping_justification semapv:MappingReview;
   rdfs:comment "It could be a subPropertyOf sdo:address property when expressed as Text" .
