@@ -1,4 +1,5 @@
 @prefix schema: <http://schema.org/> .
+@prefix cpsv-apsdo: <http://mapping.semic.eu/cpsv-ap/sdo/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -18,22 +19,28 @@
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix bussdo: <http://mapping.semic.eu/cpsv-ap/sdo/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 
-<http://mapping.semic.eu/business/sdo> a align:Alignment;
+<http://mapping.semic.eu/cpsv-ap/sdo> a align:Alignment;
   dct:created "2024-03-20"^^xsd:date;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
   dct:license <https://creativecommons.org/licenses/by/4.0/>;
   dct:title "Alignment of CPSV-AP with Schema.org";
   dct:description """It describes an alignment between Core Business and Schema.org.
-The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""" .
-
-<http://mapping.semic.eu/cpsv-ap/sdo> a align:Alignment;
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
   align:onto1 <http://purl.org/cpsv#>;
   align:onto2 <https://schema.org/>;
+  align:map <http://mapping.semic.eu/cpsv-ap/sdo/cell/1>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/2>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/3>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/4>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/5>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/7>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/9>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/11>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/12>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/13>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/14>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/15>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/16>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/17>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/20>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/21>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/28>;
   sssom:subject_source_version "3.2.0";
   sssom:object_source_version "26" .
 
