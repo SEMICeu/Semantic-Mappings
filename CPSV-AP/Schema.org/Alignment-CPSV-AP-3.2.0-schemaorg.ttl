@@ -40,7 +40,42 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
     <http://mapping.semic.eu/cpsv-ap/sdo/cell/14>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/15>,
     <http://mapping.semic.eu/cpsv-ap/sdo/cell/16>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/17>,
     <http://mapping.semic.eu/cpsv-ap/sdo/cell/20>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/21>,
-    <http://mapping.semic.eu/cpsv-ap/sdo/cell/28>;
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/28>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/32>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/33>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/34>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/36>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/37>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/39>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/40>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/42>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/43>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/44>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/45>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/46>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/47>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/48>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/49>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/50>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/51>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/52>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/53>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/54>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/56>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/57>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/58>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/60>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/62>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/63>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/64>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/66>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/67>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/69>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/71>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/75>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/76>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/77>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/78>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/79>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/80>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/81>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/82>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/83>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/84>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/85>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/88>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/89>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/90>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/91>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/93>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/94>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/96>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/97>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/99>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/100>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/106>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/107>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/109>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/111>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/113>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/114>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/115>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/116>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/121>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/123>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/126>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/127>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/129>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/130>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/133>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/137>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/138>,
+    <http://mapping.semic.eu/cpsv-ap/sdo/cell/140>, <http://mapping.semic.eu/cpsv-ap/sdo/cell/141>;
   sssom:subject_source_version "3.2.0";
   sssom:object_source_version "26" .
 
@@ -624,7 +659,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "0.7"^^xsd:float;
   owl:annotatedProperty rdfs:subPropertyOf;
   sssom:mapping_justification semapv:MappingReview;
-  dct:description "In CPSV-AP it denotes an identifier for the pieve of Evidence.";
+  dct:description "In CPSV-AP it denotes an identifier for the piece of Evidence.";
   rdfs:comment "The target entity can have multiple values" .
 
 <http://mapping.semic.eu/cpsv-ap/sdo/cell/99> a align:Cell;

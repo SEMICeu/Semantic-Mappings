@@ -178,12 +178,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   dct:description "In Core Person it denotes the identifier of a Jurisdiction" .
 
 <http://mapping.semic.eu/cper/sdo/cell/27> a align:Cell;
-  align:entity1 rdfs:label;
-  align:entity2 <https://schema.org/name>;
-  align:relation "<";
-  align:measure "1"^^xsd:float;
-  owl:annotatedProperty rdfs:subPropertyOf;
-  sssom:mapping_justification semapv:MappingReview .
+  align:entity1 rdfs:label .
 
 <http://mapping.semic.eu/cper/sdo/cell/28> a align:Cell;
   align:entity1 foaf:Person;
