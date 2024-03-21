@@ -1,6 +1,6 @@
-# Core Business Semantic Mappings
+# CCCEV Semantic Mappings
 
-This folder contains all the mappings created as outcome of the alignment process of Core Business with other specifications such as Schema.org.
+This folder contains all the mappings created as outcome of the alignment process of CCCEV with other specifications such as Schema.org.
 
 Mappings are currently provided as a spreadsheet, so they can be consulted as a tabular format, and as RDF.
 
