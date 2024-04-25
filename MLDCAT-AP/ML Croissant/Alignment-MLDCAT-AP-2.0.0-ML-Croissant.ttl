@@ -1,57 +1,59 @@
 @prefix schema: <http://schema.org/> .
-@prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix oml: <http://openml.org/openml#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix semapv: <https://w3id.org/semapv/vocab/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix sssom: <https://w3id.org/sssom/> .
-@prefix mldcatapsdo: <http://mapping.semic.eu/mldcatap/sdo/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bussdo: <http://mapping.semic.eu/mldcat-ap/sdo/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix cr: <http://mlcommons.org/croissant/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 
-<http://mapping.semic.eu/mldcatap/sdo> a align:Alignment;
-  dct:created "2024-04-23"^^xsd:date;
+<http://mapping.semic.eu/mldcat-ap/sdo> a align:Alignment;
+  dct:created "2024-04-19"^^xsd:date;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
   dct:license <https://creativecommons.org/licenses/by/4.0/>;
-  dct:title "Alignment of MLDCAT-AP with ML Croissant.";
-  dct:description """It describes an alignment between MLDCAT-AP and ML Croissant.
+  dct:title "Alignment of MLDCAT-AP with Croissant.";
+  dct:description """It describes an alignment between MLDCAT-AP and Croissant.
 The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
   align:onto1 <http://data.europa.eu/m8g/>;
-  align:onto2 <https://mlcommons.github.io/croissant/docs/croissant-spec.html>;
-  align:map <http://mapping.semic.eu/mldcatap/sdo/cell/1>, <http://mapping.semic.eu/mldcatap/sdo/cell/2>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/3>, <http://mapping.semic.eu/mldcatap/sdo/cell/4>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/5>, <http://mapping.semic.eu/mldcatap/sdo/cell/6>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/7>, <http://mapping.semic.eu/mldcatap/sdo/cell/8>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/9>, <http://mapping.semic.eu/mldcatap/sdo/cell/10>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/11>, <http://mapping.semic.eu/mldcatap/sdo/cell/12>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/13>, <http://mapping.semic.eu/mldcatap/sdo/cell/14>,
-    <http://mapping.semic.eu/mldcatap/sdo/cell/15>;
+  align:onto2 <http://mlcommons.org/croissant/>;
+  align:map <http://mapping.semic.eu/mldcat-ap/sdo/cell/1>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/2>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/3>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/4>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/5>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/6>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/7>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/8>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/9>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/10>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/11>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/12>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/13>, <http://mapping.semic.eu/mldcat-ap/sdo/cell/14>,
+    <http://mapping.semic.eu/mldcat-ap/sdo/cell/15>;
   sssom:subject_source_version "2.0.0";
   sssom:object_source_version "1.0.0" .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/1> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/1> a align:Cell;
   align:entity1 dcat:Dataset;
-  align:entity2 <https://schema.org/Dataset>;
+  align:entity2 schema:Dataset;
   align:relation "=";
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentClass .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/2> a align:Cell;
-  align:entity1 <http://openml.org/openml#collectionDate>;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/2> a align:Cell;
+  align:entity1 oml:collectionDate;
   align:entity2 schema:dateCreated;
   align:relation "<";
   align:measure "0.7"^^xsd:float;
@@ -59,7 +61,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   dct:description "In MLDCAT-AP it denotes the date the data was collected.";
   rdfs:comment "The cardinality is 1 in both models." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/3> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/3> a align:Cell;
   align:entity1 dct:creator;
   align:entity2 schema:creator;
   align:relation "=";
@@ -67,7 +69,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 1..*." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/4> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/4> a align:Cell;
   align:entity1 dct:description;
   align:entity2 schema:description;
   align:relation "=";
@@ -75,7 +77,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 1..*, in ML Croissant 1." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/5> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/5> a align:Cell;
   align:entity1 dcat:distribution;
   align:entity2 schema:distribution;
   align:relation "=";
@@ -83,7 +85,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 1..*." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/6> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/6> a align:Cell;
   align:entity1 dct:issued;
   align:entity2 schema:datePublished;
   align:relation "=";
@@ -91,7 +93,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 1." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/7> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/7> a align:Cell;
   align:entity1 dcat:keyword;
   align:entity2 schema:keywords;
   align:relation "=";
@@ -99,7 +101,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 0..* but can take multiple types." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/8> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/8> a align:Cell;
   align:entity1 dcat:landingPage;
   align:entity2 schema:url;
   align:relation "<";
@@ -108,7 +110,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   dct:description "In ML Croissant does not make a restriction of Data Provied/Third party provider.";
   rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 1." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/9> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/9> a align:Cell;
   align:entity1 dct:publisher;
   align:entity2 schema:publisher;
   align:relation "=";
@@ -116,7 +118,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 0..*." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/10> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/10> a align:Cell;
   align:entity1 dct:title;
   align:entity2 schema:name;
   align:relation "=";
@@ -124,7 +126,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 1..*, in ML Croissant 1." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/11> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/11> a align:Cell;
   align:entity1 owl:versionInfo;
   align:entity2 schema:version;
   align:relation "=";
@@ -132,7 +134,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 0..1." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/12> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/12> a align:Cell;
   align:entity1 dct:language;
   align:entity2 schema:inLanguage;
   align:relation "=";
@@ -141,7 +143,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   dct:description "In MLDCAT-AP it denotes do the language of a distribution, in ML Croissant it denotes the language of a dataset.";
   rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 0..*." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/13> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/13> a align:Cell;
   align:entity1 dct:license;
   align:entity2 schema:license;
   align:relation "=";
@@ -150,17 +152,17 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   dct:description "In MLDCAT-AP it denotes the license for a resource.";
   rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 0..*." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/14> a align:Cell;
-  align:entity1 <http://openml.org/openml#Feature>;
-  align:entity2 <http://mlcommons.org/croissant/Field>;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/14> a align:Cell;
+  align:entity1 oml:Feature;
+  align:entity2 cr:Field;
   align:relation "<";
   align:measure "0.7"^^xsd:float;
   owl:annotatedProperty rdfs:subClassOf;
   dct:description "A Field may represent a column of a table, or a nested data structure or even a nested RecordSet in the case of hierarchical data." .
 
-<http://mapping.semic.eu/mldcatap/sdo/cell/15> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/sdo/cell/15> a align:Cell;
   align:entity1 dct:type;
-  align:entity2 <http://mlcommons.org/croissant/dataType>;
+  align:entity2 cr:dataType;
   align:relation "=";
   align:measure "0.7"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty;
