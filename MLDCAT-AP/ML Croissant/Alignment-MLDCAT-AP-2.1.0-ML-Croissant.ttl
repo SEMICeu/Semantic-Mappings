@@ -1,0 +1,274 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix mldcat-ap-cr: <http://mapping.semic.eu/mldcat-ap/cr/> .
+@prefix cr: <http://mlcommons.org/croissant/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://mapping.semic.eu/mldcat-ap/cr> a align:Alignment;
+  dct:created "2025-02-13"^^xsd:date;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
+  dct:license <https://creativecommons.org/licenses/by/4.0/>;
+  dct:title "Alignment of MLDCAT-AP with Croissant.";
+  dct:description """It describes an alignment between MLDCAT-AP and Croissant.
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
+  align:onto1 <http://data.europa.eu/it6/>;
+  align:onto2 <http://mlcommons.org/croissant/>;
+  align:map <http://mapping.semic.eu/mldcat-ap/cr/cell/34>, <http://mapping.semic.eu/mldcat-ap/cr/cell/36>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/38>, <http://mapping.semic.eu/mldcat-ap/cr/cell/40>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/41>, <http://mapping.semic.eu/mldcat-ap/cr/cell/42>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/44>, <http://mapping.semic.eu/mldcat-ap/cr/cell/45>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/49>, <http://mapping.semic.eu/mldcat-ap/cr/cell/50>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/54>, <http://mapping.semic.eu/mldcat-ap/cr/cell/64>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/65>, <http://mapping.semic.eu/mldcat-ap/cr/cell/71>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/76>, <http://mapping.semic.eu/mldcat-ap/cr/cell/145>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/146>, <http://mapping.semic.eu/mldcat-ap/cr/cell/147>,
+    <http://mapping.semic.eu/mldcat-ap/cr/cell/148>;
+  sssom:subject_source_version "2.1.0";
+  sssom:object_source_version "1.0.0" .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/34> a align:Cell;
+  align:entity1 dcat:Dataset;
+  owl:annotatedSource "k=dcat::Dataset";
+  sssom:subject_label "Dataset";
+  align:entity2 schema:Dataset;
+  owl:annotatedTarget "Dataset";
+  sssom:object_label "Dataset";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/36> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/collectionDate>;
+  owl:annotatedSource "k=dcat::Dataset|a=collectionDate";
+  sssom:subject_label "collection date";
+  align:entity2 schema:dateCreated;
+  owl:annotatedTarget "Dataset.dateCreated";
+  sssom:object_label "date created";
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "In MLDCAT-AP it denotes the date the data was collected.";
+  rdfs:comment "The cardinality is 1 in both models." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/38> a align:Cell;
+  align:entity1 dct:description;
+  owl:annotatedSource "k=dcat::Dataset|a=description";
+  sssom:subject_label "description";
+  align:entity2 schema:description;
+  owl:annotatedTarget "Dataset.decsription";
+  sssom:object_label "description";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 1..*, in ML Croissant 1." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/40> a align:Cell;
+  align:entity1 dct:issued;
+  owl:annotatedSource "k=dcat::Dataset|a=issued";
+  sssom:subject_label "release date";
+  align:entity2 schema:datePublished;
+  owl:annotatedTarget "Dataset.datePublished";
+  sssom:object_label "date published";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 1." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/41> a align:Cell;
+  align:entity1 dcat:keyword;
+  owl:annotatedSource "k=dcat::Dataset|a=keyword";
+  sssom:subject_label "keyword";
+  align:entity2 schema:keywords;
+  owl:annotatedTarget "Dataset.keywords";
+  sssom:object_label "keywords";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 0..* but can take multiple types." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/42> a align:Cell;
+  align:entity1 dcat:landingPage;
+  owl:annotatedSource "k=dcat::Dataset|a=landingPage";
+  sssom:subject_label "landing page";
+  align:entity2 schema:url;
+  owl:annotatedTarget "Dataset.url";
+  sssom:object_label "url";
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "In ML Croissant does not make a restriction of Data Provied/Third party provider.";
+  rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 1." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/44> a align:Cell;
+  align:entity1 dct:title;
+  owl:annotatedSource "k=dcat::Dataset|a=title";
+  sssom:subject_label "title";
+  align:entity2 schema:name;
+  owl:annotatedTarget "Dataset.name";
+  sssom:object_label "name";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 1..*, in ML Croissant 1." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/45> a align:Cell;
+  align:entity1 owl:versionInfo;
+  owl:annotatedSource "k=dcat::Dataset|a=versionInfo";
+  sssom:subject_label "version info";
+  align:entity2 schema:version;
+  owl:annotatedTarget "Dataset.version";
+  sssom:object_label "version";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 0..1." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/49> a align:Cell;
+  align:entity1 dct:creator;
+  owl:annotatedSource "k=dcat::Dataset|r=creator|k=foaf::Agent";
+  sssom:subject_label "creator";
+  align:entity2 schema:creator;
+  owl:annotatedTarget "Dataset.creator";
+  sssom:object_label "creator";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 1..*." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/50> a align:Cell;
+  align:entity1 dcat:distribution;
+  owl:annotatedSource "k=dcat::Dataset|r=distribution|k=dcat::Distribution";
+  sssom:subject_label "dataset distribution";
+  align:entity2 schema:distribution;
+  owl:annotatedTarget "Dataset.distribution";
+  sssom:object_label "distribution";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 1..*." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/54> a align:Cell;
+  align:entity1 dct:publisher;
+  owl:annotatedSource "k=dcat::Dataset|r=publisher|k=foaf::Agent";
+  sssom:subject_label "publisher";
+  align:entity2 schema:publisher;
+  owl:annotatedTarget "Dataset.publisher";
+  sssom:object_label "pubslsher";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 0..*." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/64> a align:Cell;
+  align:entity1 dct:language;
+  owl:annotatedSource "k=dcat::Distribution|a=language";
+  sssom:subject_label "language";
+  align:entity2 schema:inLanguage;
+  owl:annotatedTarget "Distribution.inLanguage";
+  sssom:object_label "in language";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "In MLDCAT-AP it denotes do the language of a distribution, in ML Croissant it denotes the language of a dataset.";
+  rdfs:comment "In MLDCAT-AP 0..*, in ML Croissant 0..*." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/65> a align:Cell;
+  align:entity1 dct:MediaType;
+  owl:annotatedSource "k=dcat::Distribution|a=mediaType";
+  sssom:subject_label "media type";
+  align:entity2 schema:encodingFormat;
+  owl:annotatedTarget "Distribution.encodingFormat";
+  sssom:object_label "encoding format";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/71> a align:Cell;
+  align:entity1 dct:title;
+  owl:annotatedSource "k=dcat::Distribution|a=title";
+  sssom:subject_label "title";
+  align:entity2 schema:name;
+  owl:annotatedTarget "Distribution.name";
+  sssom:object_label "name";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  rdfs:comment "In MLDCAT-AP 1..*, in ML Croissant 1." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/76> a align:Cell;
+  align:entity1 dct:license;
+  owl:annotatedSource "k=dcat::Distribution|r=licence|k=dct::LicenseDocument";
+  sssom:subject_label "licence";
+  align:entity2 schema:license;
+  owl:annotatedTarget "Distribution.license";
+  sssom:object_label "license";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "In MLDCAT-AP it denotes the license for a resource.";
+  rdfs:comment "In MLDCAT-AP 0..1, in ML Croissant 0..*." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/145> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/Feature>;
+  owl:annotatedSource "k=it6::Feature";
+  sssom:subject_label "Feature";
+  align:entity2 cr:Field;
+  owl:annotatedTarget "Field";
+  sssom:object_label "Field";
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  dct:description "A Field may represent a column of a table, or a nested data structure or even a nested RecordSet in the case of hierarchical data." .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/146> a align:Cell;
+  align:entity1 dct:description;
+  owl:annotatedSource "k=it6::Feature|a=description";
+  sssom:subject_label "description";
+  align:entity2 schema:description;
+  owl:annotatedTarget "Field.description";
+  sssom:object_label "description";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/147> a align:Cell;
+  align:entity1 dct:title;
+  owl:annotatedSource "k=it6::Feature|a=title";
+  sssom:subject_label "title";
+  align:entity2 schema:name;
+  owl:annotatedTarget "Field.name";
+  sssom:object_label "name";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/cr/cell/148> a align:Cell;
+  align:entity1 dct:type;
+  owl:annotatedSource "k=it6::Feature|a=type";
+  sssom:subject_label "type";
+  align:entity2 schema:additionalType;
+  owl:annotatedTarget "Field.additionalType";
+  sssom:object_label "additional type";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty skos:closeMatch .

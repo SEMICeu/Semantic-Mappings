@@ -1,0 +1,381 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix fair4ml: <https://w3id.org/fair4ml#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix mldcat-ap-fair: <http://mapping.semic.eu/mldcat-ap/fair4ml/> .
+@prefix codemeta: <https://w3id.org/codemeta/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml> a align:Alignment;
+  dct:created "2025-02-13"^^xsd:date;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
+  dct:license <https://creativecommons.org/licenses/by/4.0/>;
+  dct:title "Alignment of MLDCAT-AP with FAIR4ML";
+  dct:description """It describes an alignment between MLDCAT-AP with FAIR4ML.
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
+  align:onto1 <http://data.europa.eu/it6/>;
+  align:onto2 <https://w3id.org/fair4ml#>;
+  align:map <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/7>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/9>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/115>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/183>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/184>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/185>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/189>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/190>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/191>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/192>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/193>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/194>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/195>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/198>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/201>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/202>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/203>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/204>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/205>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/209>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/213>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/214>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/215>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/217>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/219>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/220>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/221>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/222>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/259>;
+  sssom:subject_source_version "2.1.0";
+  sssom:object_source_version "0.1.0" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/7> a align:Cell;
+  align:entity1 dct:bibliographicCitation;
+  owl:annotatedSource "k=biro::BibliographicReference|a=bibliographicCitation";
+  sssom:subject_label "bibliographic citation";
+  align:entity2 schema:citation;
+  owl:annotatedTarget "MLModel.citation";
+  sssom:object_label "citation";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/9> a align:Cell;
+  align:entity1 dct:references;
+  owl:annotatedSource "k=biro::BibliographicReference|r=references|k=lpwcc::Paper";
+  sssom:subject_label "references";
+  align:entity2 codemeta:referencePublication;
+  owl:annotatedTarget "MLModel.referencePublication";
+  sssom:object_label "reference publication";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/115> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/carbonEmitted>;
+  owl:annotatedSource "k=it6::EnvironmentalImpact|a=carbonEmitted";
+  sssom:subject_label "carbon emitted";
+  align:entity2 fair4ml:hasCO2eEmissions;
+  owl:annotatedTarget "MLModel.hasCO2eEmissions";
+  sssom:object_label "has CO2 emissions";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "In MLDCAT-AP is associated to a class Environmental Impact (that includes the power consumed) related to the Run (execution) to train the model" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/183> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/bias>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=bias";
+  sssom:subject_label "bias";
+  align:entity2 fair4ml:modelRisksBiasLimitations;
+  owl:annotatedTarget "MLModel.modelRisksBiasLimitations";
+  sssom:object_label "model risks bias limitations";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "MLDCAT-AP has relations more specialized" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/184> a align:Cell;
+  align:entity1 dct:created;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=created";
+  sssom:subject_label "created";
+  align:entity2 schema:dateCreated;
+  owl:annotatedTarget "MLModel.dateCreated";
+  sssom:object_label "date created";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/185> a align:Cell;
+  align:entity1 dct:description;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=description";
+  sssom:subject_label "description";
+  align:entity2 schema:description;
+  owl:annotatedTarget "MLModel.description";
+  sssom:object_label "description";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/189> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/howToUse>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=howToUse";
+  sssom:subject_label "how to use";
+  align:entity2 fair4ml:usageInstructions;
+  owl:annotatedTarget "MLModel.usageInstructions";
+  sssom:object_label "usage instructions";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/190> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/intendedUse>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=intendedUse";
+  sssom:subject_label "intended use";
+  align:entity2 fair4ml:intendedUse;
+  owl:annotatedTarget "MLModel.intendedUse";
+  sssom:object_label "intended use";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/191> a align:Cell;
+  align:entity1 dcat:keyword;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=keyword";
+  sssom:subject_label "keyword";
+  align:entity2 schema:keywords;
+  owl:annotatedTarget "MLModel.keywords";
+  sssom:object_label "keywords";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/192> a align:Cell;
+  align:entity1 dct:language;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=language";
+  sssom:subject_label "language";
+  align:entity2 schema:inLanguage;
+  owl:annotatedTarget "MLModel.inLanguage";
+  sssom:object_label "in language";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/193> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/limitations>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=limitations";
+  sssom:subject_label "limitations";
+  align:entity2 fair4ml:modelRisksBiasLimitations;
+  owl:annotatedTarget "MLModel.modelRisksBiasLimitations";
+  sssom:object_label "model risks bias limitations";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "MLDCAT-AP has relations more specialized" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/194> a align:Cell;
+  align:entity1 dct:modified;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=modificationDate";
+  sssom:subject_label "modified";
+  align:entity2 schema:dateModified;
+  owl:annotatedTarget "MLModel.dateModified";
+  sssom:object_label "date modified";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/195> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/releaseDate>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=releaseDate";
+  sssom:subject_label "release date";
+  align:entity2 schema:datePublished;
+  owl:annotatedTarget "MLModel.datePublished";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/198> a align:Cell;
+  align:entity1 dct:title;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=title";
+  sssom:subject_label "name";
+  align:entity2 schema:name;
+  owl:annotatedTarget "MLModel.name";
+  sssom:object_label "name";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/201> a align:Cell;
+  align:entity1 dct:type;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=type";
+  sssom:subject_label "type";
+  align:entity2 fair4ml:modelCategory;
+  owl:annotatedTarget "MLModel.modelCategory";
+  sssom:object_label "model category";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "FAIR4ML includes in the definition \"algorithm type\"" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/202> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/version>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=version";
+  sssom:subject_label "version";
+  align:entity2 schema:version;
+  owl:annotatedTarget "MLModel.version";
+  sssom:object_label "version";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/203> a align:Cell;
+  align:entity1 dct:contributor;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=contributor|k=foaf::Agent";
+  sssom:subject_label "contributor";
+  align:entity2 schema:contributor;
+  owl:annotatedTarget "MLModel.contributor";
+  sssom:object_label "contributor";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/204> a align:Cell;
+  align:entity1 dct:creator;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=creator|k=foaf::Agent";
+  sssom:subject_label "creator";
+  align:entity2 schema:author;
+  owl:annotatedTarget "MLModel.author";
+  sssom:object_label "creator";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/205> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/fineTunedFrom>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=fineTunedFrom|k=it6::MachineLearningModel";
+  sssom:subject_label "fine tuned from";
+  align:entity2 fair4ml:fineTunedFrom;
+  owl:annotatedTarget "MLModel.fineTunedFrom";
+  sssom:object_label "fine tuned from";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/209> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasOutputFilePrediction>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasFile|k=it6::File";
+  sssom:subject_label "has output file prediction";
+  align:entity2 schema:distribution;
+  owl:annotatedTarget "MLModel.distribution";
+  sssom:object_label "distribution";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "FAIR4ML talks about downloadable dataset" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/213> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasRepository>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasRepository|k=lpwcc::Repository";
+  sssom:subject_label "has repository";
+  align:entity2 schema:codeRepository;
+  owl:annotatedTarget "MLModel.codeRepository";
+  sssom:object_label "code repository";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "FAIR4ML definition talks about code and related code" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/214> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasRisk>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasRisk|k=it6::Risk";
+  sssom:subject_label "has risk";
+  align:entity2 fair4ml:modelRisksBiasLimitations;
+  owl:annotatedTarget "MLModel.modelRisksBiasLimitations";
+  sssom:object_label "model risks bias limitations";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "MLDCAT-AP has relations more specialized" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/215> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasUploader>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasUploader|k=foaf::Agent";
+  sssom:subject_label "has uploader";
+  align:entity2 fair4ml:sharedBy;
+  owl:annotatedTarget "MLModel.sharedBy";
+  sssom:object_label "shared by";
+  align:relation "<";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  dct:description "The word sharing might be more that just uploading" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/217> a align:Cell;
+  align:entity1 dct:license;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=licence|k=dct::LicenseDocument";
+  sssom:subject_label "licence";
+  align:entity2 schema:license;
+  owl:annotatedTarget "MLModel.license";
+  sssom:object_label "licence";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/219> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/runnedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=runnedOn|k=dcat::Dataset";
+  sssom:subject_label "runned on";
+  align:entity2 fair4ml:evaluatedOn;
+  owl:annotatedTarget "MLModel.evaluatedOn";
+  sssom:object_label "evaluated on";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "Runned on is generic term just to execute the model and therefore evaluate it" .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/220> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/testedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=testedOn|k=dcat::Dataset";
+  sssom:subject_label "tested on";
+  align:entity2 fair4ml:testedOn;
+  owl:annotatedTarget "MLModel.testedOn";
+  sssom:object_label "tested on";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/221> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/trainedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=trainedOn|k=dcat::Dataset";
+  sssom:subject_label "trained on";
+  align:entity2 fair4ml:trainedOn;
+  owl:annotatedTarget "MLModel.trainedOn";
+  sssom:object_label "trained on";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/222> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/validatedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=validatedOn|k=dcat::Dataset";
+  sssom:subject_label "validated on";
+  align:entity2 fair4ml:validatedOn;
+  owl:annotatedTarget "MLModel.validatedOn";
+  sssom:object_label "validated on";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/259> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasEvaluation>;
+  owl:annotatedSource "k=it6::Run|r=hasEvaluation|k=it6::Evaluation";
+  sssom:subject_label "has evaluation";
+  align:entity2 fair4ml:evaluationMetrics;
+  owl:annotatedTarget "MLModelEvaluation.evaluationMetrics";
+  sssom:object_label "evaluation metrics";
+  align:relation "=";
+  align:measure "0.7"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty;
+  dct:description "MLDCAT-AP points to the class Evaluation instead of being a Text" .
