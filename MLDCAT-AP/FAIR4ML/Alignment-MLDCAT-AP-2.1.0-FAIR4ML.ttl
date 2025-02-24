@@ -40,15 +40,15 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
     <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/189>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/190>,
     <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/191>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/192>,
     <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/193>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/194>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/195>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/198>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/201>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/202>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/195>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/196>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/199>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/202>,
     <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/203>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/204>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/205>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/209>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/213>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/214>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/215>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/217>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/219>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/220>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/205>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/206>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/210>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/214>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/215>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/216>,
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/218>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/220>,
     <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/221>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/222>,
-    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/259>;
+    <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/223>, <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/260>;
   sssom:subject_source_version "2.1.0";
   sssom:object_source_version "0.1.0" .
 
@@ -132,6 +132,17 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty .
 
 <http://mapping.semic.eu/mldcat-ap/fair4ml/cell/190> a align:Cell;
+  align:entity1 dct:identifier;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=identifier";
+  sssom:subject_label "identifier";
+  align:entity2 schema:identifier;
+  owl:annotatedTarget "MLModel.identifier";
+  sssom:object_label "identifier";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/191> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/intendedUse>;
   owl:annotatedSource "k=it6::MachineLearningModel|a=intendedUse";
   sssom:subject_label "intended use";
@@ -142,7 +153,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/191> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/192> a align:Cell;
   align:entity1 dcat:keyword;
   owl:annotatedSource "k=it6::MachineLearningModel|a=keyword";
   sssom:subject_label "keyword";
@@ -153,7 +164,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/192> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/193> a align:Cell;
   align:entity1 dct:language;
   owl:annotatedSource "k=it6::MachineLearningModel|a=language";
   sssom:subject_label "language";
@@ -164,7 +175,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/193> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/194> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/limitations>;
   owl:annotatedSource "k=it6::MachineLearningModel|a=limitations";
   sssom:subject_label "limitations";
@@ -176,7 +187,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty rdfs:subPropertyOf;
   dct:description "MLDCAT-AP has relations more specialized" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/194> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/195> a align:Cell;
   align:entity1 dct:modified;
   owl:annotatedSource "k=it6::MachineLearningModel|a=modificationDate";
   sssom:subject_label "modified";
@@ -187,7 +198,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/195> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/196> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/releaseDate>;
   owl:annotatedSource "k=it6::MachineLearningModel|a=releaseDate";
   sssom:subject_label "release date";
@@ -197,7 +208,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/198> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/199> a align:Cell;
   align:entity1 dct:title;
   owl:annotatedSource "k=it6::MachineLearningModel|a=title";
   sssom:subject_label "name";
@@ -208,7 +219,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/201> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/202> a align:Cell;
   align:entity1 dct:type;
   owl:annotatedSource "k=it6::MachineLearningModel|a=type";
   sssom:subject_label "type";
@@ -220,7 +231,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty rdfs:subPropertyOf;
   dct:description "FAIR4ML includes in the definition \"algorithm type\"" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/202> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/203> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/version>;
   owl:annotatedSource "k=it6::MachineLearningModel|a=version";
   sssom:subject_label "version";
@@ -231,7 +242,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/203> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/204> a align:Cell;
   align:entity1 dct:contributor;
   owl:annotatedSource "k=it6::MachineLearningModel|r=contributor|k=foaf::Agent";
   sssom:subject_label "contributor";
@@ -242,7 +253,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/204> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/205> a align:Cell;
   align:entity1 dct:creator;
   owl:annotatedSource "k=it6::MachineLearningModel|r=creator|k=foaf::Agent";
   sssom:subject_label "creator";
@@ -253,7 +264,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/205> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/206> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/fineTunedFrom>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=fineTunedFrom|k=it6::MachineLearningModel";
   sssom:subject_label "fine tuned from";
@@ -264,7 +275,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/209> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/210> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/hasOutputFilePrediction>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=hasFile|k=it6::File";
   sssom:subject_label "has output file prediction";
@@ -276,7 +287,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   dct:description "FAIR4ML talks about downloadable dataset" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/213> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/214> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/hasRepository>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=hasRepository|k=lpwcc::Repository";
   sssom:subject_label "has repository";
@@ -288,7 +299,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   dct:description "FAIR4ML definition talks about code and related code" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/214> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/215> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/hasRisk>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=hasRisk|k=it6::Risk";
   sssom:subject_label "has risk";
@@ -300,7 +311,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty rdfs:subPropertyOf;
   dct:description "MLDCAT-AP has relations more specialized" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/215> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/216> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/hasUploader>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=hasUploader|k=foaf::Agent";
   sssom:subject_label "has uploader";
@@ -312,7 +323,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty rdfs:subPropertyOf;
   dct:description "The word sharing might be more that just uploading" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/217> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/218> a align:Cell;
   align:entity1 dct:license;
   owl:annotatedSource "k=it6::MachineLearningModel|r=licence|k=dct::LicenseDocument";
   sssom:subject_label "licence";
@@ -323,7 +334,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/219> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/220> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/runnedOn>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=runnedOn|k=dcat::Dataset";
   sssom:subject_label "runned on";
@@ -335,7 +346,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   owl:annotatedProperty owl:equivalentProperty;
   dct:description "Runned on is generic term just to execute the model and therefore evaluate it" .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/220> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/221> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/testedOn>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=testedOn|k=dcat::Dataset";
   sssom:subject_label "tested on";
@@ -346,7 +357,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/221> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/222> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/trainedOn>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=trainedOn|k=dcat::Dataset";
   sssom:subject_label "trained on";
@@ -357,7 +368,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/222> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/223> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/validatedOn>;
   owl:annotatedSource "k=it6::MachineLearningModel|r=validatedOn|k=dcat::Dataset";
   sssom:subject_label "validated on";
@@ -368,7 +379,7 @@ The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format 
   align:measure "1"^^xsd:float;
   owl:annotatedProperty owl:equivalentProperty .
 
-<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/259> a align:Cell;
+<http://mapping.semic.eu/mldcat-ap/fair4ml/cell/260> a align:Cell;
   align:entity1 <http://data.europa.eu/it6/hasEvaluation>;
   owl:annotatedSource "k=it6::Run|r=hasEvaluation|k=it6::Evaluation";
   sssom:subject_label "has evaluation";
