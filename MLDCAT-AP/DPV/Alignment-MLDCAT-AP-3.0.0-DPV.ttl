@@ -1,0 +1,310 @@
+@prefix schema: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix mldcat-ap-dpv: <http://mapping.semic.eu/mldcat-ap/dpv/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix codemeta: <https://w3id.org/codemeta/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<http://mapping.semic.eu/mldcat-ap/dpv> a align:Alignment;
+  dct:created "2025-11-05"^^xsd:date;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>;
+  dct:license <https://creativecommons.org/licenses/by/4.0/>;
+  dct:title "Alignment of MLDCAT-AP with DPV";
+  dct:description """It describes an alignment between MLDCAT-AP with DPV.
+The spreadsheet can be converted in RDF format using SKOS Play!. The RDF format are based on the Aligment Format and on SSSOM.""";
+  align:onto1 <http://data.europa.eu/it6/>;
+  align:onto2 <https://w3id.org/dpv>;
+  align:map <http://mapping.semic.eu/mldcat-ap/dpv/cell/10>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/70>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/88>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/90>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/101>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/113>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/115>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/116>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/187>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/190>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/199>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/205>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/212>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/240>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/242>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/245>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/252>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/253>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/254>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/284>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/326>, <http://mapping.semic.eu/mldcat-ap/dpv/cell/332>,
+    <http://mapping.semic.eu/mldcat-ap/dpv/cell/335>;
+  sssom:subject_source_version "3.0.0";
+  sssom:object_source_version "2.2" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/10> a align:Cell;
+  align:entity1 <http://data.europa.eu/m8g/ImageObject>;
+  owl:annotatedSource "k=cv::ImageObject";
+  sssom:subject_label "Image Object";
+  align:entity2 <https://w3id.org/dpv/tech#ImageContent>;
+  owl:annotatedTarget "ImageContent";
+  sssom:object_label "Image Content";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  sssom:mapping_justification "ImageObject is used for a logo while ImageContent is more generic" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/70> a align:Cell;
+  align:entity1 <https://w3id.org/dpv#hasData>;
+  owl:annotatedSource "k=dcat::Distribution|a=hasData";
+  sssom:subject_label "has data";
+  align:entity2 <https://w3id.org/dpv#hasData>;
+  owl:annotatedTarget "hasData";
+  sssom:object_label "has data";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/88> a align:Cell;
+  align:entity1 dct:LicenseDocument;
+  owl:annotatedSource "k=dct::LicenseDocument";
+  sssom:subject_label "Licence Document";
+  align:entity2 <https://w3id.org/dpv/tech#License>;
+  owl:annotatedTarget "License";
+  sssom:object_label "License";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/90> a align:Cell;
+  align:entity1 dct:Location;
+  owl:annotatedSource "k=dct::Location";
+  sssom:subject_label "Location";
+  align:entity2 <https://w3id.org/dpv#Location>;
+  owl:annotatedTarget "Location";
+  sssom:object_label "Location";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/101> a align:Cell;
+  align:entity1 foaf:Agent;
+  owl:annotatedSource "k=foaf::Agent";
+  sssom:subject_label "Agent";
+  align:entity2 <https://w3id.org/dpv#Entity>;
+  owl:annotatedTarget "Entity";
+  sssom:object_label "Entity";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/113> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/ComputerInfrastructure>;
+  owl:annotatedSource "k=it6::ComputerInfrastructure";
+  sssom:subject_label "Computer Infrastructure";
+  align:entity2 <https://w3id.org/dpv/tech#Infrastructure>;
+  owl:annotatedTarget "Infrastructure";
+  sssom:object_label "Infrastructure";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/115> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasHardware>;
+  owl:annotatedSource "k=it6::ComputerInfrastructure|r=hasHardware|k=it6::Hardware";
+  sssom:subject_label "has hardware";
+  align:entity2 <https://w3id.org/dpv/tech#hasHardware>;
+  owl:annotatedTarget "hasHardware";
+  sssom:object_label "has hardware";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/116> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasLibrary>;
+  owl:annotatedSource "k=it6::ComputerInfrastructure|r=hasLibrary|k=it6::Library";
+  sssom:subject_label "has library";
+  align:entity2 <https://w3id.org/dpv/tech#hasSoftware>;
+  owl:annotatedTarget "hasSoftware";
+  sssom:object_label "has software";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification "tech:Sofware is broader than a library" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/187> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/Hardware>;
+  owl:annotatedSource "k=it6::Hardware";
+  sssom:subject_label "Hardware";
+  align:entity2 <https://w3id.org/dpv/tech#Hardware>;
+  owl:annotatedTarget "Hardware";
+  sssom:object_label "Hardware";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/190> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/HarmRisk>;
+  owl:annotatedSource "k=it6::HarmRisk";
+  sssom:subject_label "Harm Risk";
+  align:entity2 <https://w3id.org/dpv#Risk>;
+  owl:annotatedTarget "Risk";
+  sssom:object_label "Risk";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subClassOf;
+  sssom:mapping_justification "not all the Risks can harm" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/199> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/Library>;
+  owl:annotatedSource "k=it6::Library";
+  sssom:subject_label "Library";
+  align:entity2 <https://w3id.org/dpv/tech#SoftwareLibrary>;
+  owl:annotatedTarget "SoftwareLibrary";
+  sssom:object_label "Software Library";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/205> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/MachineLearningModel>;
+  owl:annotatedSource "k=it6::MachineLearningModel";
+  sssom:subject_label "Machine Learning Model";
+  align:entity2 <https://w3id.org/dpv/ai#MachineLearningModel>;
+  owl:annotatedTarget "MachineLearningModel";
+  sssom:object_label "Machine Learning Model";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentClass .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/212> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/odrl/2/hasPolicy>;
+  owl:annotatedSource "k=it6::MachineLearningModel|a=hasPolicy";
+  sssom:subject_label "has policy";
+  align:entity2 <https://w3id.org/dpv#hasPolicy>;
+  owl:annotatedTarget "hasPolicy";
+  sssom:object_label "has policy";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/240> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasPrediction>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasOutput|k=dcat::Dataset";
+  sssom:subject_label "has prediction";
+  align:entity2 <https://w3id.org/dpv/tech#hasOutputData>;
+  owl:annotatedTarget "hasOutputData";
+  sssom:object_label "has output data";
+  align:relation ">";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty skos:narrower;
+  sssom:mapping_justification "tech:OutputData is narrower of dcat:Dataset" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/242> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasProvider>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasProvider|k=foaf::Agent";
+  sssom:subject_label "has provider";
+  align:entity2 <https://w3id.org/dpv/tech#hasProvider>;
+  owl:annotatedTarget "hasProvider";
+  sssom:object_label "has provider";
+  align:relation ">";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty skos:narrower;
+  sssom:mapping_justification ":ech:Provider is narrower than dpv:Entity" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/245> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/hasRisk>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=hasRisk|k=it6::HarmRisk";
+  sssom:subject_label "has risk";
+  align:entity2 <https://w3id.org/dpv#hasRisk>;
+  owl:annotatedTarget "hasRisk";
+  sssom:object_label "has risk";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification "an HarmRisk is subclass of Risk" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/252> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/testedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=testedOn|k=dcat::Dataset";
+  sssom:subject_label "tested on";
+  align:entity2 <https://w3id.org/dpv/ai#hasTestingData>;
+  owl:annotatedTarget "hasTestingData";
+  sssom:object_label "has testing data";
+  align:relation ">";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty skos:narrower;
+  sssom:mapping_justification "TestingData is subClassOf dcat:Dataset" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/253> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/trainedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=trainedOn|k=dcat::Dataset";
+  sssom:subject_label "trained on";
+  align:entity2 <https://w3id.org/dpv/ai#hasTrainingData>;
+  owl:annotatedTarget "hasTrainingData";
+  sssom:object_label "has training data";
+  align:relation ">";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty skos:narrower;
+  sssom:mapping_justification "TrainingData is subClassOf dcat:Dataset" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/254> a align:Cell;
+  align:entity1 <http://data.europa.eu/it6/validatedOn>;
+  owl:annotatedSource "k=it6::MachineLearningModel|r=validatedOn|k=dcat::Dataset";
+  sssom:subject_label "validated on";
+  align:entity2 <https://w3id.org/dpv/ai#hasValidationData>;
+  owl:annotatedTarget "hasValidationData";
+  sssom:object_label "has validation data";
+  align:relation ">";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty skos:narrower;
+  sssom:mapping_justification "ValidationData is subClassOf dcat:Dataset" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/284> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/mls#realizes>;
+  owl:annotatedSource "k=it6::Run|r=executes|k=mls::Algorithm";
+  sssom:subject_label "executes";
+  align:entity2 <https://w3id.org/dpv/tech#hasAlgorithm>;
+  owl:annotatedTarget "hasAlgorithm";
+  sssom:object_label "has algorithm";
+  align:relation "=";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty owl:equivalentProperty .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/326> a align:Cell;
+  align:entity1 <https://linkedpaperswithcode.com/property/hasModel>;
+  owl:annotatedSource "k=lpwcc::Paper|r=hasModel|k=it6::MachineLearningModel";
+  sssom:subject_label "has model";
+  align:entity2 <https://w3id.org/dpv/ai#hasModel>;
+  owl:annotatedTarget "hasModel";
+  sssom:object_label "has model";
+  align:relation "<";
+  align:measure "1"^^xsd:float;
+  owl:annotatedProperty rdfs:subPropertyOf;
+  sssom:mapping_justification "The range of dpv:hasModel includes an ai:Model that is more generic of a MachineLearningModel" .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/332> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/mls#Algorithm>;
+  owl:annotatedSource "k=mls::Algorithm";
+  sssom:subject_label "Algorithm";
+  align:entity2 <https://w3id.org/dpv/tech#Algorithm>;
+  owl:annotatedTarget "Algorithm";
+  sssom:object_label "Algorithm";
+  align:relation "=";
+  align:measure "1.0"^^xsd:float .
+
+<http://mapping.semic.eu/mldcat-ap/dpv/cell/335> a align:Cell;
+  align:entity1 <http://www.w3.org/ns/odrl/2/Policy>;
+  owl:annotatedSource "k=odrl::Policy";
+  sssom:subject_label "Policy";
+  align:entity2 <https://w3id.org/dpv#Policy>;
+  owl:annotatedTarget "Policy";
+  sssom:object_label "Policy";
+  align:relation "=";
+  align:measure "1.0"^^xsd:float .
